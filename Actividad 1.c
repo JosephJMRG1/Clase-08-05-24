@@ -40,7 +40,7 @@ int factorialIterativo(int n)
         for (int i = 1; i <= n; i++)
         {
             factorial *= i;
-            printf("El factorial de %i es: %i\n", n, factorial);
+            printf("El factorial de %i es: %i\n", i, factorial);
         }
     }
     return factorial;
