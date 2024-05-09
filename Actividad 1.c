@@ -86,7 +86,6 @@ void menuOpciones()
             printf("Opcion no valida.\n\n");
         }
     }
-
     return;
 }
 
