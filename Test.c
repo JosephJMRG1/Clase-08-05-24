@@ -46,14 +46,13 @@ int factorialIterativo(int n)
 
     return 0;
 }
-
-int main()
+void menuOpciones()
 {
-
-    printf("Menu de opciones: \n");
+    printf("Menu de opciones \n");
     printf("1.- Modo Recursivo\n");
     printf("2.- Modo Iterativo\n");
-    int opcion = scanf("%i", &opcion);
+    printf("Seleccione un modo: ");
+    int opcion = scanf("%i\n\n", &opcion);
     if (opcion == 1)
     {
         int numRecursivo;
@@ -72,6 +71,10 @@ int main()
         int resIterativo = factorialIterativo(numIterativo);
         printf("%i\n\n", resIterativo);
     }
+}
 
+int main()
+{
+    menuOpciones();
     return 0;
 }
