@@ -56,7 +56,9 @@ void menuOpciones()
         printf("2.- Modo Iterativo\n");
         printf("3.- Salir\n");
         printf("Seleccione un modo: ");
-        int opcion = scanf("%i", &opcion);
+        int opcion;
+        scanf("%i", &opcion);
+
         if (opcion == 1)
         {
             int numRecursivo;
@@ -81,9 +83,10 @@ void menuOpciones()
         }
         else
         {
-            printf("Opcion no valida.\n");
+            printf("Opcion no valida.\n\n");
         }
     }
+
     return;
 }
 
