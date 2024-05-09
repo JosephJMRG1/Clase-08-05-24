@@ -8,6 +8,7 @@ int factorialRecursivo(int n)
     if (n == 0 || n == 1)
     {
         factorial = n;
+        printf("\nEl factorial de %i es: %i\n", n, factorial);
     }
     else if (n < 0)
     {
@@ -17,16 +18,17 @@ int factorialRecursivo(int n)
     else
     {
         factorial = n * factorialRecursivo(n - 1);
+        printf("El factorial de %i es: %i\n", n, factorial);
     }
     return factorial;
 }
 
 int factorialIterativo(int n)
 {
-    int factorial;
+    int factorial = 1;
     if (n == 0 || n == 1)
     {
-        factorial = n;
+        printf("\nEl factorial de %i es: %i\n", n, factorial);
     }
     else if (n < 0)
     {
@@ -35,21 +37,20 @@ int factorialIterativo(int n)
     }
     else
     {
-        for (int i = 0; i < n; i++)
+        for (int i = 1; i <= n; i++)
         {
-            factorial = n * (n - 1);
+            factorial *= i;
+            printf("El factorial de %i es: %i\n", n, factorial);
         }
     }
     return factorial;
-
-    return 0;
 }
 
 void menuOpciones()
 {
     while (1)
     {
-        printf("Menu de opciones \n");
+        printf("\nMenu de opciones\n\n");
         printf("1.- Modo Recursivo\n");
         printf("2.- Modo Iterativo\n");
         printf("3.- Salir\n");
@@ -60,20 +61,18 @@ void menuOpciones()
         if (opcion == 1)
         {
             int numRecursivo;
-            printf("\n\nModo Recursivo\n");
+            printf("\nModo Recursivo\n");
             printf("Defina el factorial a calcular: ");
             scanf("%i", &numRecursivo);
-            int resRecursivo = factorialRecursivo(numRecursivo);
-            printf("El resultado es: %i", resRecursivo);
+            factorialRecursivo(numRecursivo);
         }
         else if (opcion == 2)
         {
             int numIterativo;
-            printf("\n\nModo Iterativo\n");
+            printf("\nModo Iterativo\n");
             printf("Defina el factorial a calcular: ");
             scanf("%i", &numIterativo);
-            int resIterativo = factorialIterativo(numIterativo);
-            printf("El resultado es: %i", resIterativo);
+            factorialIterativo(numIterativo);
         }
         else if (opcion == 3)
         {
