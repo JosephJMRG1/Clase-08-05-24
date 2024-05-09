@@ -2,6 +2,8 @@
 
 // #define MAX_DIGITOS 100
 
+/*---------------------------------------- ACTIVIDAD 1 ----------------------------------------*/
+
 int factorialRecursivo(int n)
 {
     int factorial;
