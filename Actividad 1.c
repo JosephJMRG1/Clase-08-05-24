@@ -52,7 +52,6 @@ void mostrarMenu()
     printf("1.- Modo Recursivo\n");
     printf("2.- Modo Iterativo\n");
     printf("3.- Salir\n");
-    printf("Seleccione un modo: ");
 }
 
 int seleccionOpciones()
@@ -60,6 +59,7 @@ int seleccionOpciones()
     while (1)
     {
         mostrarMenu();
+        printf("Seleccione un modo: ");
         int opcion;
         scanf("%i", &opcion);
         if (opcion == 1)
